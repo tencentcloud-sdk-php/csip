@@ -18,15 +18,15 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 主机资产信息
+ * ip列表
  *
  * @method string getAssetId() 获取资产id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetId(string $AssetId) 设置资产id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAssetName() 获取资产名
+ * @method string getAssetName() 获取资产name
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAssetName(string $AssetName) 设置资产名
+ * @method void setAssetName(string $AssetName) 设置资产name
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssetType() 获取资产类型
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCWPStatus() 获取防护状态
+ * @method integer getCFWStatus() 获取云防状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCWPStatus(integer $CWPStatus) 设置防护状态
+ * @method void setCFWStatus(integer $CFWStatus) 设置云防状态
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssetCreateTime() 获取资产创建时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -48,105 +48,37 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIp(string $PublicIp) 设置公网ip
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPrivateIp() 获取私网ip
+ * @method integer getPublicIpType() 获取公网ip类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrivateIp(string $PrivateIp) 设置私网ip
+ * @method void setPublicIpType(integer $PublicIpType) 设置公网ip类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVpcId() 获取vpc id
+ * @method string getVpcId() 获取vpc
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVpcId(string $VpcId) 设置vpc id
+ * @method void setVpcId(string $VpcId) 设置vpc
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVpcName() 获取vpc 名
+ * @method string getVpcName() 获取vpc名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVpcName(string $VpcName) 设置vpc 名
+ * @method void setVpcName(string $VpcName) 设置vpc名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAppId() 获取appid信息
+ * @method integer getAppId() 获取appid
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppId(integer $AppId) 设置appid信息
+ * @method void setAppId(integer $AppId) 设置appid
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取用户uin
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置用户uin
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNickName() 获取昵称
+ * @method string getNickName() 获取名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNickName(string $NickName) 设置昵称
+ * @method void setNickName(string $NickName) 设置名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAvailableArea() 获取可用区
+ * @method integer getIsCore() 获取核心
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAvailableArea(string $AvailableArea) 设置可用区
+ * @method void setIsCore(integer $IsCore) 设置核心
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getIsCore() 获取是否核心
+ * @method integer getIsCloud() 获取云上
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsCore(integer $IsCore) 设置是否核心
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubnetId() 获取子网id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubnetId(string $SubnetId) 设置子网id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSubnetName() 获取子网名
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubnetName(string $SubnetName) 设置子网名
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceUuid() 获取uuid
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceUuid(string $InstanceUuid) 设置uuid
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceQUuid() 获取qquid
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceQUuid(string $InstanceQUuid) 设置qquid
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOsName() 获取os名
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOsName(string $OsName) 设置os名
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPartitionCount() 获取分区
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPartitionCount(integer $PartitionCount) 设置分区
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCPUInfo() 获取cpu信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCPUInfo(string $CPUInfo) 设置cpu信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCPUSize() 获取cpu大小
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCPUSize(integer $CPUSize) 设置cpu大小
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCPULoad() 获取cpu负载
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCPULoad(string $CPULoad) 设置cpu负载
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMemorySize() 获取内存大小
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMemorySize(string $MemorySize) 设置内存大小
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMemoryLoad() 获取内存负载
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMemoryLoad(string $MemoryLoad) 设置内存负载
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDiskSize() 获取硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskSize(string $DiskSize) 设置硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDiskLoad() 获取硬盘负载
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiskLoad(string $DiskLoad) 设置硬盘负载
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAccountCount() 获取账号数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccountCount(string $AccountCount) 设置账号数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProcessCount() 获取进程数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProcessCount(string $ProcessCount) 设置进程数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAppCount() 获取软件应用
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppCount(string $AppCount) 设置软件应用
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getPortCount() 获取监听端口
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPortCount(integer $PortCount) 设置监听端口
+ * @method void setIsCloud(integer $IsCloud) 设置云上
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAttack() 获取网络攻击
 注意：此字段可能返回 null，表示取不到有效值。
@@ -160,29 +92,25 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIntercept(integer $Intercept) 设置网络拦截
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInBandwidth() 获取入向峰值带宽
+ * @method string getInBandwidth() 获取入向带宽
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInBandwidth(string $InBandwidth) 设置入向峰值带宽
+ * @method void setInBandwidth(string $InBandwidth) 设置入向带宽
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOutBandwidth() 获取出向峰值带宽
+ * @method string getOutBandwidth() 获取出向带宽
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutBandwidth(string $OutBandwidth) 设置出向峰值带宽
+ * @method void setOutBandwidth(string $OutBandwidth) 设置出向带宽
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInFlow() 获取入向累计流量
+ * @method string getInFlow() 获取入向流量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInFlow(string $InFlow) 设置入向累计流量
+ * @method void setInFlow(string $InFlow) 设置入向流量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOutFlow() 获取出向累计流量
+ * @method string getOutFlow() 获取出向流量
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOutFlow(string $OutFlow) 设置出向累计流量
+ * @method void setOutFlow(string $OutFlow) 设置出向流量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastScanTime() 获取最近扫描时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastScanTime(string $LastScanTime) 设置最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getNetWorkOut() 获取恶意主动外联
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNetWorkOut(integer $NetWorkOut) 设置恶意主动外联
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPortRisk() 获取端口风险
 注意：此字段可能返回 null，表示取不到有效值。
@@ -196,32 +124,36 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigurationRisk(integer $ConfigurationRisk) 设置配置风险
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getScanTask() 获取扫描任务数
+ * @method integer getScanTask() 获取扫描任务
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScanTask(integer $ScanTask) 设置扫描任务数
+ * @method void setScanTask(integer $ScanTask) 设置扫描任务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWeakPassword() 获取弱口令
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWeakPassword(integer $WeakPassword) 设置弱口令
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWebContentRisk() 获取内容风险
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWebContentRisk(integer $WebContentRisk) 设置内容风险
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTag() 获取标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(array $Tag) 设置标签
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMemberId() 获取memberId
+ * @method string getAddressId() 获取eip主键
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMemberId(string $MemberId) 设置memberId
+ * @method void setAddressId(string $AddressId) 设置eip主键
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOs() 获取os全称
+ * @method string getMemberId() 获取memberid信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOs(string $Os) 设置os全称
+ * @method void setMemberId(string $MemberId) 设置memberid信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRiskExposure() 获取风险服务暴露
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskExposure(integer $RiskExposure) 设置风险服务暴露
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBASAgentStatus() 获取模拟攻击工具状态。0代表未安装，1代表已安装，2代表已离线
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBASAgentStatus(integer $BASAgentStatus) 设置模拟攻击工具状态。0代表未安装，1代表已安装，2代表已离线
-注意：此字段可能返回 null，表示取不到有效值。
  */
-class CVMAssetVO extends AbstractModel
+class IpAssetListVO extends AbstractModel
 {
     /**
      * @var string 资产id
@@ -230,7 +162,7 @@ class CVMAssetVO extends AbstractModel
     public $AssetId;
 
     /**
-     * @var string 资产名
+     * @var string 资产name
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssetName;
@@ -248,10 +180,10 @@ class CVMAssetVO extends AbstractModel
     public $Region;
 
     /**
-     * @var integer 防护状态
+     * @var integer 云防状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $CWPStatus;
+    public $CFWStatus;
 
     /**
      * @var string 资产创建时间
@@ -266,25 +198,25 @@ class CVMAssetVO extends AbstractModel
     public $PublicIp;
 
     /**
-     * @var string 私网ip
+     * @var integer 公网ip类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $PrivateIp;
+    public $PublicIpType;
 
     /**
-     * @var string vpc id
+     * @var string vpc
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
-     * @var string vpc 名
+     * @var string vpc名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcName;
 
     /**
-     * @var integer appid信息
+     * @var integer appid
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
@@ -296,124 +228,22 @@ class CVMAssetVO extends AbstractModel
     public $Uin;
 
     /**
-     * @var string 昵称
+     * @var string 名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NickName;
 
     /**
-     * @var string 可用区
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $AvailableArea;
-
-    /**
-     * @var integer 是否核心
+     * @var integer 核心
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsCore;
 
     /**
-     * @var string 子网id
+     * @var integer 云上
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $SubnetId;
-
-    /**
-     * @var string 子网名
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $SubnetName;
-
-    /**
-     * @var string uuid
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $InstanceUuid;
-
-    /**
-     * @var string qquid
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $InstanceQUuid;
-
-    /**
-     * @var string os名
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $OsName;
-
-    /**
-     * @var integer 分区
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $PartitionCount;
-
-    /**
-     * @var string cpu信息
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $CPUInfo;
-
-    /**
-     * @var integer cpu大小
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $CPUSize;
-
-    /**
-     * @var string cpu负载
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $CPULoad;
-
-    /**
-     * @var string 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $MemorySize;
-
-    /**
-     * @var string 内存负载
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $MemoryLoad;
-
-    /**
-     * @var string 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $DiskSize;
-
-    /**
-     * @var string 硬盘负载
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $DiskLoad;
-
-    /**
-     * @var string 账号数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $AccountCount;
-
-    /**
-     * @var string 进程数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $ProcessCount;
-
-    /**
-     * @var string 软件应用
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $AppCount;
-
-    /**
-     * @var integer 监听端口
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $PortCount;
+    public $IsCloud;
 
     /**
      * @var integer 网络攻击
@@ -434,25 +264,25 @@ class CVMAssetVO extends AbstractModel
     public $Intercept;
 
     /**
-     * @var string 入向峰值带宽
+     * @var string 入向带宽
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InBandwidth;
 
     /**
-     * @var string 出向峰值带宽
+     * @var string 出向带宽
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutBandwidth;
 
     /**
-     * @var string 入向累计流量
+     * @var string 入向流量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InFlow;
 
     /**
-     * @var string 出向累计流量
+     * @var string 出向流量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutFlow;
@@ -462,12 +292,6 @@ class CVMAssetVO extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastScanTime;
-
-    /**
-     * @var integer 恶意主动外联
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $NetWorkOut;
 
     /**
      * @var integer 端口风险
@@ -488,10 +312,22 @@ class CVMAssetVO extends AbstractModel
     public $ConfigurationRisk;
 
     /**
-     * @var integer 扫描任务数
+     * @var integer 扫描任务
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanTask;
+
+    /**
+     * @var integer 弱口令
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WeakPassword;
+
+    /**
+     * @var integer 内容风险
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WebContentRisk;
 
     /**
      * @var array 标签
@@ -500,16 +336,16 @@ class CVMAssetVO extends AbstractModel
     public $Tag;
 
     /**
-     * @var string memberId
+     * @var string eip主键
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AddressId;
+
+    /**
+     * @var string memberid信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemberId;
-
-    /**
-     * @var string os全称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Os;
 
     /**
      * @var integer 风险服务暴露
@@ -518,75 +354,35 @@ class CVMAssetVO extends AbstractModel
     public $RiskExposure;
 
     /**
-     * @var integer 模拟攻击工具状态。0代表未安装，1代表已安装，2代表已离线
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $BASAgentStatus;
-
-    /**
      * @param string $AssetId 资产id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AssetName 资产名
+     * @param string $AssetName 资产name
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetType 资产类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CWPStatus 防护状态
+     * @param integer $CFWStatus 云防状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetCreateTime 资产创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicIp 公网ip
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $PrivateIp 私网ip
+     * @param integer $PublicIpType 公网ip类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VpcId vpc id
+     * @param string $VpcId vpc
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VpcName vpc 名
+     * @param string $VpcName vpc名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AppId appid信息
+     * @param integer $AppId appid
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 用户uin
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NickName 昵称
+     * @param string $NickName 名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AvailableArea 可用区
+     * @param integer $IsCore 核心
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $IsCore 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubnetId 子网id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SubnetName 子网名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceUuid uuid
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceQUuid qquid
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OsName os名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PartitionCount 分区
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CPUInfo cpu信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CPUSize cpu大小
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CPULoad cpu负载
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MemorySize 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MemoryLoad 内存负载
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DiskSize 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DiskLoad 硬盘负载
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AccountCount 账号数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ProcessCount 进程数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AppCount 软件应用
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $PortCount 监听端口
+     * @param integer $IsCloud 云上
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Attack 网络攻击
 注意：此字段可能返回 null，表示取不到有效值。
@@ -594,17 +390,15 @@ class CVMAssetVO extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Intercept 网络拦截
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InBandwidth 入向峰值带宽
+     * @param string $InBandwidth 入向带宽
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OutBandwidth 出向峰值带宽
+     * @param string $OutBandwidth 出向带宽
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InFlow 入向累计流量
+     * @param string $InFlow 入向流量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OutFlow 出向累计流量
+     * @param string $OutFlow 出向流量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastScanTime 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $NetWorkOut 恶意主动外联
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PortRisk 端口风险
 注意：此字段可能返回 null，表示取不到有效值。
@@ -612,17 +406,19 @@ class CVMAssetVO extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConfigurationRisk 配置风险
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ScanTask 扫描任务数
+     * @param integer $ScanTask 扫描任务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WeakPassword 弱口令
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WebContentRisk 内容风险
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tag 标签
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MemberId memberId
+     * @param string $AddressId eip主键
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Os os全称
+     * @param string $MemberId memberid信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskExposure 风险服务暴露
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BASAgentStatus 模拟攻击工具状态。0代表未安装，1代表已安装，2代表已离线
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -654,8 +450,8 @@ class CVMAssetVO extends AbstractModel
             $this->Region = $param["Region"];
         }
 
-        if (array_key_exists("CWPStatus",$param) and $param["CWPStatus"] !== null) {
-            $this->CWPStatus = $param["CWPStatus"];
+        if (array_key_exists("CFWStatus",$param) and $param["CFWStatus"] !== null) {
+            $this->CFWStatus = $param["CFWStatus"];
         }
 
         if (array_key_exists("AssetCreateTime",$param) and $param["AssetCreateTime"] !== null) {
@@ -666,8 +462,8 @@ class CVMAssetVO extends AbstractModel
             $this->PublicIp = $param["PublicIp"];
         }
 
-        if (array_key_exists("PrivateIp",$param) and $param["PrivateIp"] !== null) {
-            $this->PrivateIp = $param["PrivateIp"];
+        if (array_key_exists("PublicIpType",$param) and $param["PublicIpType"] !== null) {
+            $this->PublicIpType = $param["PublicIpType"];
         }
 
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
@@ -690,80 +486,12 @@ class CVMAssetVO extends AbstractModel
             $this->NickName = $param["NickName"];
         }
 
-        if (array_key_exists("AvailableArea",$param) and $param["AvailableArea"] !== null) {
-            $this->AvailableArea = $param["AvailableArea"];
-        }
-
         if (array_key_exists("IsCore",$param) and $param["IsCore"] !== null) {
             $this->IsCore = $param["IsCore"];
         }
 
-        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
-            $this->SubnetId = $param["SubnetId"];
-        }
-
-        if (array_key_exists("SubnetName",$param) and $param["SubnetName"] !== null) {
-            $this->SubnetName = $param["SubnetName"];
-        }
-
-        if (array_key_exists("InstanceUuid",$param) and $param["InstanceUuid"] !== null) {
-            $this->InstanceUuid = $param["InstanceUuid"];
-        }
-
-        if (array_key_exists("InstanceQUuid",$param) and $param["InstanceQUuid"] !== null) {
-            $this->InstanceQUuid = $param["InstanceQUuid"];
-        }
-
-        if (array_key_exists("OsName",$param) and $param["OsName"] !== null) {
-            $this->OsName = $param["OsName"];
-        }
-
-        if (array_key_exists("PartitionCount",$param) and $param["PartitionCount"] !== null) {
-            $this->PartitionCount = $param["PartitionCount"];
-        }
-
-        if (array_key_exists("CPUInfo",$param) and $param["CPUInfo"] !== null) {
-            $this->CPUInfo = $param["CPUInfo"];
-        }
-
-        if (array_key_exists("CPUSize",$param) and $param["CPUSize"] !== null) {
-            $this->CPUSize = $param["CPUSize"];
-        }
-
-        if (array_key_exists("CPULoad",$param) and $param["CPULoad"] !== null) {
-            $this->CPULoad = $param["CPULoad"];
-        }
-
-        if (array_key_exists("MemorySize",$param) and $param["MemorySize"] !== null) {
-            $this->MemorySize = $param["MemorySize"];
-        }
-
-        if (array_key_exists("MemoryLoad",$param) and $param["MemoryLoad"] !== null) {
-            $this->MemoryLoad = $param["MemoryLoad"];
-        }
-
-        if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
-            $this->DiskSize = $param["DiskSize"];
-        }
-
-        if (array_key_exists("DiskLoad",$param) and $param["DiskLoad"] !== null) {
-            $this->DiskLoad = $param["DiskLoad"];
-        }
-
-        if (array_key_exists("AccountCount",$param) and $param["AccountCount"] !== null) {
-            $this->AccountCount = $param["AccountCount"];
-        }
-
-        if (array_key_exists("ProcessCount",$param) and $param["ProcessCount"] !== null) {
-            $this->ProcessCount = $param["ProcessCount"];
-        }
-
-        if (array_key_exists("AppCount",$param) and $param["AppCount"] !== null) {
-            $this->AppCount = $param["AppCount"];
-        }
-
-        if (array_key_exists("PortCount",$param) and $param["PortCount"] !== null) {
-            $this->PortCount = $param["PortCount"];
+        if (array_key_exists("IsCloud",$param) and $param["IsCloud"] !== null) {
+            $this->IsCloud = $param["IsCloud"];
         }
 
         if (array_key_exists("Attack",$param) and $param["Attack"] !== null) {
@@ -798,10 +526,6 @@ class CVMAssetVO extends AbstractModel
             $this->LastScanTime = $param["LastScanTime"];
         }
 
-        if (array_key_exists("NetWorkOut",$param) and $param["NetWorkOut"] !== null) {
-            $this->NetWorkOut = $param["NetWorkOut"];
-        }
-
         if (array_key_exists("PortRisk",$param) and $param["PortRisk"] !== null) {
             $this->PortRisk = $param["PortRisk"];
         }
@@ -818,6 +542,14 @@ class CVMAssetVO extends AbstractModel
             $this->ScanTask = $param["ScanTask"];
         }
 
+        if (array_key_exists("WeakPassword",$param) and $param["WeakPassword"] !== null) {
+            $this->WeakPassword = $param["WeakPassword"];
+        }
+
+        if (array_key_exists("WebContentRisk",$param) and $param["WebContentRisk"] !== null) {
+            $this->WebContentRisk = $param["WebContentRisk"];
+        }
+
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
             $this->Tag = [];
             foreach ($param["Tag"] as $key => $value){
@@ -827,20 +559,16 @@ class CVMAssetVO extends AbstractModel
             }
         }
 
+        if (array_key_exists("AddressId",$param) and $param["AddressId"] !== null) {
+            $this->AddressId = $param["AddressId"];
+        }
+
         if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
             $this->MemberId = $param["MemberId"];
         }
 
-        if (array_key_exists("Os",$param) and $param["Os"] !== null) {
-            $this->Os = $param["Os"];
-        }
-
         if (array_key_exists("RiskExposure",$param) and $param["RiskExposure"] !== null) {
             $this->RiskExposure = $param["RiskExposure"];
-        }
-
-        if (array_key_exists("BASAgentStatus",$param) and $param["BASAgentStatus"] !== null) {
-            $this->BASAgentStatus = $param["BASAgentStatus"];
         }
     }
 }
