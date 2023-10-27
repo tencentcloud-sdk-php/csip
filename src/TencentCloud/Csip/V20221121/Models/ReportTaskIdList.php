@@ -18,28 +18,28 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRiskCenterAssetViewPortRiskList请求参数结构体
+ * 报告中的task_id list
  *
- * @method Filter getFilter() 获取过滤内容
- * @method void setFilter(Filter $Filter) 设置过滤内容
- * @method array getTags() 获取资产标签
- * @method void setTags(array $Tags) 设置资产标签
+ * @method array getTaskIdList() 获取任务id列表
+ * @method void setTaskIdList(array $TaskIdList) 设置任务id列表
+ * @method string getAppId() 获取租户ID
+ * @method void setAppId(string $AppId) 设置租户ID
  */
-class DescribeRiskCenterAssetViewPortRiskListRequest extends AbstractModel
+class ReportTaskIdList extends AbstractModel
 {
     /**
-     * @var Filter 过滤内容
+     * @var array 任务id列表
      */
-    public $Filter;
+    public $TaskIdList;
 
     /**
-     * @var array 资产标签
+     * @var string 租户ID
      */
-    public $Tags;
+    public $AppId;
 
     /**
-     * @param Filter $Filter 过滤内容
-     * @param array $Tags 资产标签
+     * @param array $TaskIdList 任务id列表
+     * @param string $AppId 租户ID
      */
     function __construct()
     {
@@ -54,18 +54,12 @@ class DescribeRiskCenterAssetViewPortRiskListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
-            $this->Filter = new Filter();
-            $this->Filter->deserialize($param["Filter"]);
+        if (array_key_exists("TaskIdList",$param) and $param["TaskIdList"] !== null) {
+            $this->TaskIdList = $param["TaskIdList"];
         }
 
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = [];
-            foreach ($param["Tags"] as $key => $value){
-                $obj = new AssetTag();
-                $obj->deserialize($value);
-                array_push($this->Tags, $obj);
-            }
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
         }
     }
 }
