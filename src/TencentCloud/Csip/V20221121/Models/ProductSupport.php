@@ -18,18 +18,8 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 漏洞和资产信息
+ * 漏洞信息产品支持状态
  *
- * @method string getStateCode() 获取返回查询状态
- * @method void setStateCode(string $StateCode) 设置返回查询状态
- * @method array getDataBug() 获取无
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataBug(array $DataBug) 设置无
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDataAsset() 获取无
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataAsset(array $DataAsset) 设置无
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getVSSScan() 获取true支持扫描。false不支持扫描
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVSSScan(boolean $VSSScan) 设置true支持扫描。false不支持扫描
@@ -42,42 +32,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCFWPatch(string $CFWPatch) 设置1支持虚拟补丁，0或空不支持
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getWafPatch() 获取0不支持，1支持
+ * @method integer getWafPatch() 获取0不支持，1支持	
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWafPatch(integer $WafPatch) 设置0不支持，1支持
+ * @method void setWafPatch(integer $WafPatch) 设置0不支持，1支持	
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCWPFix() 获取0不支持，1支持
+ * @method integer getCWPFix() 获取0不支持，1支持	
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCWPFix(integer $CWPFix) 设置0不支持，1支持
+ * @method void setCWPFix(integer $CWPFix) 设置0不支持，1支持	
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDataSupport() 获取产品支持状态
+ * @method string getCveId() 获取cveid
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataSupport(array $DataSupport) 设置产品支持状态
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCveId() 获取cveId
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCveId(string $CveId) 设置cveId
+ * @method void setCveId(string $CveId) 设置cveid
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class DataSearchBug extends AbstractModel
+class ProductSupport extends AbstractModel
 {
-    /**
-     * @var string 返回查询状态
-     */
-    public $StateCode;
-
-    /**
-     * @var array 无
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $DataBug;
-
-    /**
-     * @var array 无
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $DataAsset;
-
     /**
      * @var boolean true支持扫描。false不支持扫描
 注意：此字段可能返回 null，表示取不到有效值。
@@ -97,48 +66,35 @@ class DataSearchBug extends AbstractModel
     public $CFWPatch;
 
     /**
-     * @var integer 0不支持，1支持
+     * @var integer 0不支持，1支持	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WafPatch;
 
     /**
-     * @var integer 0不支持，1支持
+     * @var integer 0不支持，1支持	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CWPFix;
 
     /**
-     * @var array 产品支持状态
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $DataSupport;
-
-    /**
-     * @var string cveId
+     * @var string cveid
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CveId;
 
     /**
-     * @param string $StateCode 返回查询状态
-     * @param array $DataBug 无
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DataAsset 无
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $VSSScan true支持扫描。false不支持扫描
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CWPScan 0不支持，1支持
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CFWPatch 1支持虚拟补丁，0或空不支持
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $WafPatch 0不支持，1支持
+     * @param integer $WafPatch 0不支持，1支持	
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CWPFix 0不支持，1支持
+     * @param integer $CWPFix 0不支持，1支持	
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DataSupport 产品支持状态
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CveId cveId
+     * @param string $CveId cveid
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -154,28 +110,6 @@ class DataSearchBug extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StateCode",$param) and $param["StateCode"] !== null) {
-            $this->StateCode = $param["StateCode"];
-        }
-
-        if (array_key_exists("DataBug",$param) and $param["DataBug"] !== null) {
-            $this->DataBug = [];
-            foreach ($param["DataBug"] as $key => $value){
-                $obj = new BugInfoDetail();
-                $obj->deserialize($value);
-                array_push($this->DataBug, $obj);
-            }
-        }
-
-        if (array_key_exists("DataAsset",$param) and $param["DataAsset"] !== null) {
-            $this->DataAsset = [];
-            foreach ($param["DataAsset"] as $key => $value){
-                $obj = new AssetInfoDetail();
-                $obj->deserialize($value);
-                array_push($this->DataAsset, $obj);
-            }
-        }
-
         if (array_key_exists("VSSScan",$param) and $param["VSSScan"] !== null) {
             $this->VSSScan = $param["VSSScan"];
         }
@@ -194,15 +128,6 @@ class DataSearchBug extends AbstractModel
 
         if (array_key_exists("CWPFix",$param) and $param["CWPFix"] !== null) {
             $this->CWPFix = $param["CWPFix"];
-        }
-
-        if (array_key_exists("DataSupport",$param) and $param["DataSupport"] !== null) {
-            $this->DataSupport = [];
-            foreach ($param["DataSupport"] as $key => $value){
-                $obj = new ProductSupport();
-                $obj->deserialize($value);
-                array_push($this->DataSupport, $obj);
-            }
         }
 
         if (array_key_exists("CveId",$param) and $param["CveId"] !== null) {
