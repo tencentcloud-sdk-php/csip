@@ -18,33 +18,26 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRepositoryImageAssets返回参数结构体
+ * DescribeHighBaseLineRiskList返回参数结构体
  *
- * @method array getData() 获取仓库镜像列表
- * @method void setData(array $Data) 设置仓库镜像列表
- * @method integer getTotal() 获取总数
- * @method void setTotal(integer $Total) 设置总数
- * @method array getRegionList() 获取region列表
- * @method void setRegionList(array $RegionList) 设置region列表
+ * @method integer getTotalCount() 获取高危基线风险数量
+ * @method void setTotalCount(integer $TotalCount) 设置高危基线风险数量
+ * @method array getHighBaseLineRiskList() 获取高危基线风险列表
+ * @method void setHighBaseLineRiskList(array $HighBaseLineRiskList) 设置高危基线风险列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeRepositoryImageAssetsResponse extends AbstractModel
+class DescribeHighBaseLineRiskListResponse extends AbstractModel
 {
     /**
-     * @var array 仓库镜像列表
+     * @var integer 高危基线风险数量
      */
-    public $Data;
+    public $TotalCount;
 
     /**
-     * @var integer 总数
+     * @var array 高危基线风险列表
      */
-    public $Total;
-
-    /**
-     * @var array region列表
-     */
-    public $RegionList;
+    public $HighBaseLineRiskList;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +45,8 @@ class DescribeRepositoryImageAssetsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 仓库镜像列表
-     * @param integer $Total 总数
-     * @param array $RegionList region列表
+     * @param integer $TotalCount 高危基线风险数量
+     * @param array $HighBaseLineRiskList 高危基线风险列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,25 +62,16 @@ class DescribeRepositoryImageAssetsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new RepositoryImageVO();
-                $obj->deserialize($value);
-                array_push($this->Data, $obj);
-            }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
-        }
-
-        if (array_key_exists("RegionList",$param) and $param["RegionList"] !== null) {
-            $this->RegionList = [];
-            foreach ($param["RegionList"] as $key => $value){
-                $obj = new FilterDataObject();
+        if (array_key_exists("HighBaseLineRiskList",$param) and $param["HighBaseLineRiskList"] !== null) {
+            $this->HighBaseLineRiskList = [];
+            foreach ($param["HighBaseLineRiskList"] as $key => $value){
+                $obj = new HighBaseLineRiskItem();
                 $obj->deserialize($value);
-                array_push($this->RegionList, $obj);
+                array_push($this->HighBaseLineRiskList, $obj);
             }
         }
 
