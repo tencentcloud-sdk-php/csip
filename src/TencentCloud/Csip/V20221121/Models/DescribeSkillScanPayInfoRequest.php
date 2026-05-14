@@ -18,20 +18,16 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeExposeAssetCategory请求参数结构体
+ * DescribeSkillScanPayInfo请求参数结构体
  *
- * @method array getMemberId() 获取<p>集团账号的成员id</p>
- * @method void setMemberId(array $MemberId) 设置<p>集团账号的成员id</p>
+
  */
-class DescribeExposeAssetCategoryRequest extends AbstractModel
+class DescribeSkillScanPayInfoRequest extends AbstractModel
 {
-    /**
-     * @var array <p>集团账号的成员id</p>
-     */
-    public $MemberId;
+
 
     /**
-     * @param array $MemberId <p>集团账号的成员id</p>
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class DescribeExposeAssetCategoryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MemberId",$param) and $param["MemberId"] !== null) {
-            $this->MemberId = $param["MemberId"];
-        }
+
     }
 }
