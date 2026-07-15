@@ -18,32 +18,28 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 融合规则目录项
+ * ModifyCosAuditBucketMonitorStatus请求参数结构体
  *
- * @method string getRuleID() 获取融合规则 ID
-参数格式：形如 9xxxx
- * @method void setRuleID(string $RuleID) 设置融合规则 ID
-参数格式：形如 9xxxx
- * @method string getRuleName() 获取风险类别名称
- * @method void setRuleName(string $RuleName) 设置风险类别名称
+ * @method array getBucketNameSet() 获取存储桶集合
+ * @method void setBucketNameSet(array $BucketNameSet) 设置存储桶集合
+ * @method integer getMonitorStatus() 获取0 关闭 1 开启
+ * @method void setMonitorStatus(integer $MonitorStatus) 设置0 关闭 1 开启
  */
-class SkillRuleCatalogItem extends AbstractModel
+class ModifyCosAuditBucketMonitorStatusRequest extends AbstractModel
 {
     /**
-     * @var string 融合规则 ID
-参数格式：形如 9xxxx
+     * @var array 存储桶集合
      */
-    public $RuleID;
+    public $BucketNameSet;
 
     /**
-     * @var string 风险类别名称
+     * @var integer 0 关闭 1 开启
      */
-    public $RuleName;
+    public $MonitorStatus;
 
     /**
-     * @param string $RuleID 融合规则 ID
-参数格式：形如 9xxxx
-     * @param string $RuleName 风险类别名称
+     * @param array $BucketNameSet 存储桶集合
+     * @param integer $MonitorStatus 0 关闭 1 开启
      */
     function __construct()
     {
@@ -58,12 +54,12 @@ class SkillRuleCatalogItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RuleID",$param) and $param["RuleID"] !== null) {
-            $this->RuleID = $param["RuleID"];
+        if (array_key_exists("BucketNameSet",$param) and $param["BucketNameSet"] !== null) {
+            $this->BucketNameSet = $param["BucketNameSet"];
         }
 
-        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
-            $this->RuleName = $param["RuleName"];
+        if (array_key_exists("MonitorStatus",$param) and $param["MonitorStatus"] !== null) {
+            $this->MonitorStatus = $param["MonitorStatus"];
         }
     }
 }
