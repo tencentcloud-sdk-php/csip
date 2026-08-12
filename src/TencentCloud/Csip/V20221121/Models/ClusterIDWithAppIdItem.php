@@ -18,28 +18,28 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 主机实例定位信息
+ * 集群定位信息
  *
- * @method integer getAppId() 获取机器所属AppId
- * @method void setAppId(integer $AppId) 设置机器所属AppId
- * @method string getInstanceID() 获取机器实例ID
- * @method void setInstanceID(string $InstanceID) 设置机器实例ID
+ * @method string getClusterID() 获取集群ID
+ * @method void setClusterID(string $ClusterID) 设置集群ID
+ * @method integer getAppId() 获取集群所属AppId
+ * @method void setAppId(integer $AppId) 设置集群所属AppId
  */
-class InstanceIDWithAppIdItem extends AbstractModel
+class ClusterIDWithAppIdItem extends AbstractModel
 {
     /**
-     * @var integer 机器所属AppId
+     * @var string 集群ID
+     */
+    public $ClusterID;
+
+    /**
+     * @var integer 集群所属AppId
      */
     public $AppId;
 
     /**
-     * @var string 机器实例ID
-     */
-    public $InstanceID;
-
-    /**
-     * @param integer $AppId 机器所属AppId
-     * @param string $InstanceID 机器实例ID
+     * @param string $ClusterID 集群ID
+     * @param integer $AppId 集群所属AppId
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class InstanceIDWithAppIdItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
         }
 
-        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
-            $this->InstanceID = $param["InstanceID"];
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
         }
     }
 }

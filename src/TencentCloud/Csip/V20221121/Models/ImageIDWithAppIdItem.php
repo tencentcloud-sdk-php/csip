@@ -18,28 +18,28 @@ namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 主机实例定位信息
+ * 镜像ID和对应的appid账号信息
  *
- * @method integer getAppId() 获取机器所属AppId
- * @method void setAppId(integer $AppId) 设置机器所属AppId
- * @method string getInstanceID() 获取机器实例ID
- * @method void setInstanceID(string $InstanceID) 设置机器实例ID
+ * @method integer getAppId() 获取<p>账号ID</p>
+ * @method void setAppId(integer $AppId) 设置<p>账号ID</p>
+ * @method string getImageID() 获取<p>容器镜像ID</p>
+ * @method void setImageID(string $ImageID) 设置<p>容器镜像ID</p>
  */
-class InstanceIDWithAppIdItem extends AbstractModel
+class ImageIDWithAppIdItem extends AbstractModel
 {
     /**
-     * @var integer 机器所属AppId
+     * @var integer <p>账号ID</p>
      */
     public $AppId;
 
     /**
-     * @var string 机器实例ID
+     * @var string <p>容器镜像ID</p>
      */
-    public $InstanceID;
+    public $ImageID;
 
     /**
-     * @param integer $AppId 机器所属AppId
-     * @param string $InstanceID 机器实例ID
+     * @param integer $AppId <p>账号ID</p>
+     * @param string $ImageID <p>容器镜像ID</p>
      */
     function __construct()
     {
@@ -58,8 +58,8 @@ class InstanceIDWithAppIdItem extends AbstractModel
             $this->AppId = $param["AppId"];
         }
 
-        if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
-            $this->InstanceID = $param["InstanceID"];
+        if (array_key_exists("ImageID",$param) and $param["ImageID"] !== null) {
+            $this->ImageID = $param["ImageID"];
         }
     }
 }
